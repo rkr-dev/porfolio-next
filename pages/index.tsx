@@ -1,14 +1,16 @@
-import type { NextPage } from 'next';
+import type { ReactElement } from 'react';
 import { Layout } from '../components/Layout/Layout';
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
-    <Layout>
       <div>
-
+        <h2>hello</h2>
       </div>
-    </Layout>
   );
 };
 
-export default Home;
+Home.getLayout = function getLayout(home: ReactElement) {
+  return <Layout>
+    {home}
+  </Layout>
+} 
