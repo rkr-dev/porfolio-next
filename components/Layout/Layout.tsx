@@ -1,18 +1,23 @@
 import Head from 'next/head';
-import { Footer } from '../Footer/Footer';
-import { Navbar } from '../Navbar/Navbar';
-import { Sidebar } from '../Sidebar/Sidebar';
+import { useState } from 'react';
+import { Footer, Navbar, Sidebar } from '../../components';
 import styles from './Layout.module.css';
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen((open) => !open);
+  };
+
   return (
     <div className={styles.Layout}>
       <Head>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Navbar />
-      <Sidebar />
-      {children}
+      <Navbar toggleSidebar={toggleSidebar} />
+      <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+      <main className={styles.PageContent}>{children}</main>
       <Footer />
     </div>
   );

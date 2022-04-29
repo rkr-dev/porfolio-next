@@ -3,6 +3,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
+}
+
+.PageContent{
+ height: 80vh;
+ width: 100%;
+  background-color: gainsboro;
 }
