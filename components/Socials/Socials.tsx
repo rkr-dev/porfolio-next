@@ -17,7 +17,7 @@ const links = socials.map(({ id, icon, url }) => {
   );
 });
 
-export const Socials = ({ styleClass }:{styleClass :String}) => {
+export const Socials = ({ styleClass }:{styleClass? :String}) => {
   const { FooterLinks, SidebarIcons } = styles;
 
   return (

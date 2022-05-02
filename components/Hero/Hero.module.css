@@ -1,0 +1,139 @@
+.Hero {
+  padding-top: 10rem;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 100;
+}
+
+.HeroCenter {
+  height: 100%;
+  display: grid;
+  align-items: center;
+  z-index: 2;
+}
+
+.HeroInfo {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.HeroLeft {
+  animation: showUp 5s ease-in 0.3s forwards;
+}
+
+.TypeWrapOne {
+  font-size: 3rem;
+  line-height: 1;
+  min-height: 32px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+.TypeWrapTwo {
+  margin-top: 1rem;
+  font-size: 2rem;
+  line-height: 1;
+  min-height: 32px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+   color: rgba(231, 76, 60, 1);
+}
+
+.TypeWrapOne span {
+  color: rgba(0, 0, 0.9);;
+}
+
+.HeroImg {
+  display: none;
+}
+
+.AbtBtn {
+  margin-top: 1.5rem;
+  animation: slideUp 4.5s ease-in-out 0.3s forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes showUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Hero h3 {
+  animation: slideUp 4s ease-in-out 0.3s forwards;
+  margin: 10px 0;
+}
+.HeroIcons {
+  justify-items: flex-start;
+}
+.Hero .btn {
+  margin-top: 1.25rem;
+}
+
+@media screen and (min-width: 1170px) {
+  .Hero h3 {
+    line-height: 1;
+  }
+
+  .HeroInfo {
+    grid-row: 1/1;
+    grid-column: 1 / span 8;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .HeroCenter {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .HeroInfo {
+    grid-column: 1 / span 8;
+  }
+  .HeroImg {
+    display: block;
+    grid-row: 1/1;
+    grid-column: 6/-1;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .TypeWrapOne {
+    font-size: 4rem;
+    line-height: 1;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+  }
+
+  .TypeWrapTwo {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    line-height: 1;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@media screen and (min-width: 563px) {
+  .HeroInfo .HeroLeft {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 562px) {
+  .HeroInfo h1 span {
+    color: #e74c3c;
+  }
+}

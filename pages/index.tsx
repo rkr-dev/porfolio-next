@@ -1,10 +1,11 @@
 import type { ReactElement } from 'react';
-import { Layout } from '../components/Layout/Layout';
+import { Hero,Layout } from '../components';
+
 
 export default function Home() {
   return (
       <div>
-        <h2>hello</h2>
+        <Hero/>
       </div>
   );
 };

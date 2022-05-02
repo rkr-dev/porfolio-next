@@ -17,7 +17,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       </Head>
       <Navbar toggleSidebar={toggleSidebar} />
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <main className={styles.PageContent}>{children}</main>
+      <main>{children}</main>
       <Footer />
     </div>
   );
