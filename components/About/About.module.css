@@ -1,0 +1,64 @@
+.AboutPage {
+  padding: 7rem 0;
+  background: hsl(210, 36%, 96%);
+}
+
+.AboutImgContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.AboutText {
+  padding: 0 2rem;
+}
+
+.AboutText .sectionTitle {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.about-text .underline {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.AboutText p {
+  line-height: 2;
+}
+
+.AboutStack span {
+  display: inline-block;
+  background: hsl(212, 33%, 89%);
+  color: hsl(210, 22%, 49%);
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+.AboutStack span {
+  margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 992px) {
+  .AboutCenter {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    column-gap: 4rem;
+  }
+  .AboutImgContainer {
+    grid-column: 1 / span 5;
+    margin-bottom: 0;
+  }
+  .AboutImg {
+    height: 350px;
+    width: 350px;
+  }
+  .AboutText {
+    grid-column: 6 / -1;
+  }
+}
