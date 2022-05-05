@@ -6,7 +6,7 @@ export default function ProjectsPage() {
   
   return (
     <section>
-      <Projects projects={projects} title='featured projects'/>
+      <Projects projects={projects} title='All projects'/>
     </section>
   );
 }

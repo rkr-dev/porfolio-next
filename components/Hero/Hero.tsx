@@ -33,17 +33,17 @@ const titleOptions = {
   strings: [
     'WEB DEVELOPER',
     'FREELANCER',
-    'WEB3 DEV',
+    'WEB3',
     'FRONT END',
     'BACK END',
     'MERN STACK',
   ],
   typeSpeed: 200,
   backSpeed: 125,
-  startDelay: 0.1,
+  startDelay: 4500,
   showCursor: false,
   smartBackspace: true,
-  loop:true
+  loop: true,
 };
 export const TitleTyper = () => {
   const el: any = React.useRef(null);
