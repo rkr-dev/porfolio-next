@@ -1,26 +1,29 @@
 .SectionTitle {
-    margin-bottom: 4rem;
-    text-align: center;
-  }
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+  text-align: center;
+  font-weight: 500;
+}
 
-.SectionTitle h2{
+.SectionTitle h2 {
   text-transform: capitalize;
-  }
-  
-  .AboutSectionTitle {
-    margin-bottom: 2rem;
-    text-align: left;
-  }
-  .AboutSectionTitle h2 {
-    text-transform: capitalize;
-  }
+    line-height: 2rem;
+}
 
-  .AboutUnderline {
-    width: 5rem;
-    height: 0.25rem;
-    margin-bottom: 1.25rem;
-    background: #e74c3c;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  
+.AboutSectionTitle {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.AboutSectionTitle h2 {
+  text-transform: capitalize;
+    line-height: 2rem;
+}
+
+.AboutUnderline {
+  width: 5rem;
+  height: 0.25rem;
+  margin-bottom: 1.25rem;
+  background: #e74c3c;
+  margin-left: 0;
+  margin-right: 0;
+}

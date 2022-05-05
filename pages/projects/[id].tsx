@@ -5,12 +5,12 @@ import { ProjectProps } from '../../interfaces';
 import { projects } from '../../utils/data';
 
 type Props = {
-  project?:ProjectProps
-}
+  project: ProjectProps;
+};
 
 const ProjectDetails = ({project}:Props) => {
   return <Layout>
-    <ProjectPage project={ project}/>
+    {project ? <ProjectPage project={ project}/>:null }
   </Layout>
 }
 

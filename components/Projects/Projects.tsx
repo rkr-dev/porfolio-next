@@ -10,7 +10,7 @@ export const Projects = ({
   showLink,
 }: {
   projects: ProjectProps[] | [];
-  title: String;
+  title: string;
   showLink?: Boolean;
 }) => {
   return (

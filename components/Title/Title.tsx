@@ -4,8 +4,8 @@ export const Title = ({
   title,
   styleClass,
 }: {
-  title: String;
-  styleClass?: String;
+  title: string;
+  styleClass?: string;
 }) => {
   return (
     <div

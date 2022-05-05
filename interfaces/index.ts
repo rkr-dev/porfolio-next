@@ -3,12 +3,12 @@ export type ProjectProps = {
   description: string;
   title: string;
   github: string;
-  stack: { id: Number; title: string }[] | [];
+  stack: { id: number; title: string }[] | [];
   url: string;
   image: string;
   featured: Boolean;
   visible: Boolean;
-};
+} ;
 
 export type PostProps = {
   id: string;
