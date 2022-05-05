@@ -13,7 +13,7 @@ export const About = ({
 }: {
   title: String;
   info: String;
-  stack: { id: Number; title: String }[];
+  stack: { id: Number; title: String }[] | [];
   image: string;
 }) => {
   return (
