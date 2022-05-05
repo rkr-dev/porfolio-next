@@ -1,6 +1,6 @@
-import { Project,Post } from '../interfaces';
+import { ProjectProps,PostProps } from '../interfaces';
 
-export const projects:Project[] = [
+export const projects:ProjectProps[] = [
   {
     id: 1,
     title: 'Amazon-Web3',
@@ -110,7 +110,7 @@ export const projects:Project[] = [
   },
 ];
 
-export const posts:Post[] = [
+export const posts: PostProps[] = [
   {
     id: '1',
     title: '13 JavaScript One-Liners That’ll Make You Look Like a Pro',
@@ -122,6 +122,7 @@ export const posts:Post[] = [
 From complex frameworks to handling API’s, there is just SO much to learn.
 `,
     date: `01/01/2021`,
+    featured: true,
   },
   {
     id: '2',
@@ -132,6 +133,7 @@ From complex frameworks to handling API’s, there is just SO much to learn.
     category: `javascript`,
     desc: `Design patterns are a set of general and reusable solutions that can be applied to different problems in sw development`,
     date: `01/15/2021`,
+    featured: true,
   },
   {
     id: '3',
@@ -142,5 +144,6 @@ From complex frameworks to handling API’s, there is just SO much to learn.
     category: `javascript`,
     desc: `A polyfill is a piece of code that implements the features that you expect the browser to support natively.`,
     date: `02/01/2021`,
+    featured: true,
   },
 ];

@@ -1,16 +1,16 @@
-export type Project = {
-  id: Number;
-  description: String;
-  title: String;
+export type ProjectProps = {
+  id: number;
+  description: string;
+  title: string;
   github: string;
-  stack: { id: Number; title: String }[] | [];
+  stack: { id: Number; title: string }[] | [];
   url: string;
-  image: String;
+  image: string;
   featured: Boolean;
   visible: Boolean;
 };
 
-export type Post = {
+export type PostProps = {
   id: string;
   title: string;
   content: string;
@@ -19,4 +19,5 @@ export type Post = {
   category: string;
   desc: string;
   date: string;
+  featured: Boolean;
 };
