@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/Link';
+import Link from 'next/link';
 import {ProjectProps} from '../../interfaces'
 import { FaGithubSquare, FaShareSquare } from 'react-icons/fa';
 import styles from './Project.module.css';
