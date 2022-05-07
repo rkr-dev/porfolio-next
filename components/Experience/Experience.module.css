@@ -1,0 +1,100 @@
+  .jobsCenter {
+    width: 80vw;
+    margin: 0 auto;
+    max-width: 1170px;
+  }
+  .btnContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-bottom: 4rem;
+  }
+  .jobBtn {
+    background: transparent;
+    border-color: transparent;
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    letter-spacing: 0.2rem;
+    margin: 0 0 0.5rem 0;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    padding: 0.25rem 0;
+    line-height: 1;
+    width: 100%;
+    text-align: start;
+  }
+  .jobBtn:hover {
+    color: #E74C3C;
+    box-shadow: 0 2px #FFE5DB ;
+  }
+  .activeBtn {
+    color: #E74C3C;
+    box-shadow: 0 2px #FFE5DB;
+  }
+  .jobInfo {
+    max-height: 420px;
+  }
+  .jobInfo h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .jobInfo h4 {
+    text-transform: uppercase;
+    color: hsl(210, 52%, 49%);
+    background: hsl(212, 43%, 89%);
+    display: inline-block;
+    padding: 0.475rem 0.5rem;
+    margin-bottom: 0.475rem; ;
+    border-radius: 0.25rem; 
+  }
+
+ .jobInfo h6{
+   margin-bottom: 0.4rem;
+   font-weight: 600;
+ }
+
+  .jobDate {
+    letter-spacing: 0.2rem;
+    margin-bottom: 0.575rem;
+  }
+  .jobDesc {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    align-items: center;
+    margin-bottom: 1.25rem;
+  }
+  .jobDesc p {
+    margin-bottom: 0;
+    color: hsl(209, 34%, 30%);
+  }
+  .jobIcon {
+    color: #E74C3C;
+  }
+  @media screen and (min-width: 992px) {
+    .jobsCenter {
+      width: 90vw;
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: 350px;
+      column-gap: 4rem;
+    }
+    .btnContainer {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .jobBtn {
+      margin-bottom: 1rem;
+    }
+    .activeBtn {
+      box-shadow: -2px 0 #E74C3C;
+    }
+    .jobBtn:hover {
+      box-shadow: -2px 0 #E74C3C;
+    }
+  }
+  
+  

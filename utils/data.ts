@@ -1,4 +1,4 @@
-import { ProjectProps,PostProps } from '../interfaces';
+import { ProjectProps,PostProps,JobProps } from '../interfaces';
 
 export const projects:ProjectProps[] = [
   {
@@ -145,5 +145,63 @@ From complex frameworks to handling API’s, there is just SO much to learn.
     desc: `A polyfill is a piece of code that implements the features that you expect the browser to support natively.`,
     date: `02/01/2021`,
     featured: true,
+  },
+];
+
+export const jobs: JobProps[] = [
+  {
+    id: 1,
+    company: 'Hamara Chess Academy',
+    position: 'Customer Relations',
+    location: 'India',
+    date: 'Jun 2017 - Dec 2021',
+    desc: [
+      {
+        id: 1,
+        name: 'Managed customer on-boarding processes, ensuring that their expectations are met.',
+      },
+      {
+        id: 2,
+        name: 'Collaborated with the internal departments and ensured customer satisfaction.',
+      },
+    ],
+  },
+  {
+    id: 2,
+    company: 'eClinicalWorks',
+    position: 'Customer Relations',
+    location: 'India',
+    date: 'Dec 2011 - June 2016',
+    desc: [
+      {
+        id: 1,
+        name: 'Responsible for building and managing client relationships, client business assessment, client satisfaction and ensuring that the versions of the healthcare information technology platform, products, and their underlying technologies are current and up to date.',
+      },
+      {
+        id: 2,
+        name: 'Collaborated with the internal stake holders and ensured customer satisfaction.',
+      },
+      {
+        id: 3,
+        name: 'Developed a knowledge sharing website using WordPress for our department.',
+      },
+    ],
+  },
+  {
+    id: 3,
+    company: 'Tata Consultancy Services',
+    position: 'Customer Relations',
+    location: 'India',
+    date: 'Apr 2009 - Dec 2011',
+    desc: [
+      {
+        id: 1,
+        name: 'Responsible for setting up the payment arrangements for the Citibank NA credit card customers.',
+      },
+      {
+        id: 2,
+        name: 'Maintain the daily report of pending and processed financial accounts of credit card customers.',
+      },
+    ],
   },
 ];
