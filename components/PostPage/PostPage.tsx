@@ -1,7 +1,7 @@
 import cx from 'classnames';
-import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 import Link from 'next/link';
+import ReactMarkdown from 'react-markdown';
 import { PostProps } from '../../interfaces';
 import styles from './PostPage.module.css';
 
@@ -25,10 +25,10 @@ export const PostPage = ({
         <article className={styles.PostContent}>
           <h1>{title}</h1>
           <div className={styles.PostDetails}>
-            <span>{ category}</span>
-            <span>{ date}</span>
+            <span>{category}</span>
+            <span>{date}</span>
           </div>
-          <ReactMarkdown children={content} />
+          <ReactMarkdown>{content}</ReactMarkdown>
         </article>
         <Link href='/blog'>
           <a className={cx('btn', 'centerBtn')}> blog</a>

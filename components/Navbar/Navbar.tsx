@@ -1,5 +1,6 @@
 import cx from 'classnames';
 import Link from 'next/link';
+import Image from 'next/image'
 import { FaAlignRight } from 'react-icons/fa';
 import styles from './Navbar.module.css';
 import { Links } from '../Links/Links';
@@ -12,14 +13,11 @@ export const Navbar = ({ toggleSidebar }: { toggleSidebar: (event: React.MouseEv
         <div className={styles.NavHeader}>
           <Link href='/'>
             <a>
-              <img
-                src='/logo.svg'
+              <Image
+                src='/icon.png'
                 alt='logo'
-                style={{
-                  width: '50px',
-                  height: '50px',
-                  border: '3px solid hsl(209, 61%, 16%)',
-                }}
+                width={50}
+                height={50}
               />
             </a>
           </Link>
