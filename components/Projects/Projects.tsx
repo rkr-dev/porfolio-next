@@ -1,4 +1,4 @@
-import cx from 'classNames';
+import cx from 'classnames';
 import Link from 'next/link';
 import { Project, Title } from '../../components';
 import { ProjectProps } from '../../interfaces';

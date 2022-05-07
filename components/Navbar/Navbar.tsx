@@ -1,4 +1,4 @@
-import cx from 'classNames';
+import cx from 'classnames';
 import Link from 'next/link';
 import { FaAlignRight } from 'react-icons/fa';
 import styles from './Navbar.module.css';

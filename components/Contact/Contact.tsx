@@ -1,5 +1,5 @@
 import emailjs from '@emailjs/browser';
-import cx from 'classNames';
+import cx from 'classnames';
 import { useState,useRef } from 'react';
 import styles from './Contact.module.css';
 
