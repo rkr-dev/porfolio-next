@@ -14,3 +14,4 @@ export { Quotes } from './Quotes/Quotes';
 export { Sidebar } from './Sidebar/Sidebar';
 export { Socials } from './Socials/Socials';
 export { Title } from './Title/Title';
+export {Contact} from './Contact/Contact'
