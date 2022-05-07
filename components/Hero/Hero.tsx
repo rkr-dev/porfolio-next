@@ -39,7 +39,7 @@ const titleOptions = {
     'MERN STACK',
   ],
   typeSpeed: 200,
-  backSpeed: 125,
+  backSpeed: 115,
   startDelay: 4500,
   showCursor: false,
   smartBackspace: true,

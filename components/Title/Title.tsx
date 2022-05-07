@@ -13,7 +13,7 @@ export const Title = ({
         styleClass === 'about' ? styles.AboutSectionTitle : styles.SectionTitle
       }
     >
-      <h2>{title || 'title'}</h2>
+      <h3>{title || 'title'}</h3>
       <div
         className={styleClass === 'about' ? styles.AboutUnderline : 'underline'}
       ></div>

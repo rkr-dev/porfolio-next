@@ -11,9 +11,9 @@ export const About = ({
   stack,
   image,
 }: {
-  title: String;
-  info: String;
-  stack: { id: Number; title: String }[] | [];
+  title: string;
+  info: string;
+  stack: { id: number; title: string }[] | [];
   image: string;
 }) => {
   return (

@@ -1,7 +1,7 @@
 .contactPage {
     display: grid;
     place-items: center;
-    padding: 5rem 0;
+    padding: 7rem 0;
     background: hsl(210, 36%, 96%);
     min-height: calc(100vh - 5rem - 9rem);
   }

@@ -3,20 +3,22 @@
   margin-bottom: 6rem;
   text-align: center;
   font-weight: 500;
+  letter-spacing: 2px;
 }
 
-.SectionTitle h2 {
+.SectionTitle h3 {
   text-transform: capitalize;
-    line-height: 2rem;
+  line-height: 2.5rem;
 }
 
 .AboutSectionTitle {
   margin-bottom: 2rem;
   text-align: left;
+  letter-spacing: 2px;
 }
 .AboutSectionTitle h2 {
   text-transform: capitalize;
-    line-height: 2rem;
+  line-height: 2.5rem;
 }
 
 .AboutUnderline {

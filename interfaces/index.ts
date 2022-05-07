@@ -21,3 +21,12 @@ export type PostProps = {
   date: string;
   featured: Boolean;
 };
+
+export type JobProps = {
+  id: number;
+  company:string;
+  position:string;
+  location:string;
+  date:string;
+  desc:{id:number,name:string}[];
+};
