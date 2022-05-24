@@ -5,21 +5,20 @@ export type ProjectProps = {
   github: string;
   stack: { id: number; title: string }[] | [];
   url: string;
-  image: string;
+  image: ImageProps;
   featured: Boolean;
   visible: Boolean;
-} ;
+};
 
 export type PostProps = {
   id: string;
   title: string;
   content: string;
-  image: string;
+  image: ImageProps;
   slug: string;
   category: string;
   desc: string;
   date: string;
-  featured: Boolean;
 };
 
 export type JobProps = {
@@ -29,4 +28,10 @@ export type JobProps = {
   location:string;
   date:string;
   desc:{id:number,name:string}[];
+};
+
+export type ImageProps = {
+  url: string;
+  name?: string;
+  alternativeText?: string
 };
