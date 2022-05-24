@@ -1,24 +1,25 @@
-import cx from 'classnames';
-import { GetStaticProps,GetStaticPaths } from 'next';
+import { client } from '../../graphql/apollo';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { Layout, ProjectPage } from '../../components';
 import { ProjectProps } from '../../interfaces';
-import { projects } from '../../utils/data';
+import { GET_ALL_PROJECT_ID, GET_PROJECT } from '../../graphql';
 
 type Props = {
   project: ProjectProps;
 };
 
-const ProjectDetails = ({project}:Props) => {
-  return <Layout>
-    {project ? <ProjectPage project={ project}/>:null }
-  </Layout>
-}
+const ProjectDetails = ({ project }: Props) => {
+  return <Layout>{project ? <ProjectPage project={project} /> : null}</Layout>;
+};
 
-export default ProjectDetails
+export default ProjectDetails;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // Get the paths we want to pre-render based on users
-  const paths = projects.map((project) => ({
+  const { data } = await client.query({
+    query: GET_ALL_PROJECT_ID,
+  });
+  const projects = data.projects.data;
+  const paths = projects.map((project: any) => ({
     params: { id: project.id.toString() },
   }));
 
@@ -30,13 +31,25 @@ export const getStaticPaths: GetStaticPaths = async () => {
 // direct database queries.
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
-    const id = params?.id
-    const project = projects.find((data) => data.id === Number(id))
-    console.log(id, project);
-    // By returning { props: item }, the StaticPropsDetail component
-    // will receive `item` as a prop at build time
-    return { props: { project } }
+    const { data } = await client.query({
+      query: GET_PROJECT,
+      variables: {
+        _id: params?.id,
+      },
+    });
+    const project = {
+      id: data.projects.data[0].id,
+      title: data.projects.data[0].attributes.title,
+      description: data.projects.data[0].attributes.description,
+      image: data.projects.data[0].attributes.image.data.attributes,
+      github: data.projects.data[0].attributes.github,
+      url: data.projects.data[0].attributes.url,
+      featured: data.projects.data[0].attributes.featured,
+      stack: data.projects.data[0].attributes.stack,
+      visible: data.projects.data[0].attributes.visible,
+    };
+    return { props: { project } };
   } catch (err: any) {
-    return { props: { errors: err.message } }
+    return { props: { errors: err.message } };
   }
-}
+};

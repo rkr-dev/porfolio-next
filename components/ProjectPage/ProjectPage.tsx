@@ -16,11 +16,11 @@ export const ProjectPage = ({
     <section className={styles.ProjectTemplate}>
       <div className={cx('sectionCenter')}>
         <Image
-          src={image}
+          src={image.url}
           width={`100%`}
           height={`100%`}
           layout='responsive'
-          alt={title}
+          alt={image.alternativeText}
           style={{
             borderTopLeftRadius: '0.25rem',
             borderTopRightRadius: '0.25rem',
