@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import { Footer, Navbar, Sidebar } from '../../components';
+import StrapiApolloProvider from '../../graphql/apollo';
 import styles from './Layout.module.css';
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -11,6 +12,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
+    <StrapiApolloProvider>
     <div className={styles.Layout}>
       <Head>
         <link rel='icon' href='/favicon.ico' />
@@ -19,6 +21,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
       <main>{children}</main>
       <Footer />
-    </div>
+      </div>
+    </StrapiApolloProvider>
   );
 };
