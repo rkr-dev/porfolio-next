@@ -15,11 +15,11 @@ export const PostPage = ({
   return (
     <section className={styles.PostPage}>
       <Image
-        src={image}
+        src={image.url}
         width={`100%`}
         height={`40%`}
         layout='responsive'
-        alt={title}
+        alt={image.alternativeText}
       />
       <div className={cx('sectionCenter')}>
         <article className={styles.PostContent}>
