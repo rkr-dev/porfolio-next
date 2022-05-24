@@ -1,33 +1,23 @@
 import cx from 'classnames';
 import Link from 'next/link';
 import { Post, Title } from '../../components';
+import { PostProps } from '../../interfaces';
 import styles from './Posts.module.css';
 
 export const Posts = ({
   posts,
   title,
-  showLink,
+  showLink
 }: {
-  posts:
-    | {
-        id: string;
-        title: string;
-        content: string;
-        image: string;
-        slug: string;
-        category: string;
-        desc: string;
-        date: string;
-      }[]
-    | [],
-  title: string,
-  showLink?: Boolean
+  posts: PostProps[] | [];
+  title: string;
+  showLink?: boolean;
 }) => {
   return (
     <section className='section'>
       <Title title={title} />
       <div className={cx('sectionCenter', styles.blogsCenter)}>
-        {posts.map((node) => (
+        {posts.map((node: PostProps) => (
           <Post key={node.id} {...node} />
         ))}
       </div>

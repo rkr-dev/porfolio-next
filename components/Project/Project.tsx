@@ -22,8 +22,8 @@ export const Project = ({
           <div className={styles.ImageContainer}>
             {image && (
               <Image
-                src={image}
-                alt={title}
+                src={image.url}
+                alt={image.alternativeText}
                 width={`100%`}
                 height={`100%`}
                 layout='responsive'
