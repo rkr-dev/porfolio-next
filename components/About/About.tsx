@@ -3,6 +3,7 @@ import Image from 'next/image'
 import cx from 'classnames';
 import {Title} from '../../components'
 import styles from './About.module.css';
+import { ImageProps } from '../../interfaces';
 
 
 export const About = ({
@@ -14,15 +15,15 @@ export const About = ({
   title: string;
   info: string;
   stack: { id: number; title: string }[] | [];
-  image: string;
+  image: ImageProps;
 }) => {
   return (
     <section className={styles.AboutPage}>
       <div className={cx('SectionCenter', styles.AboutCenter)}>
         <div className={styles.AboutImgContainer}>
           <Image
-            src={image}
-            alt={title}
+            src={image.url}
+            alt={image.alternativeText}
             layout='fixed'
             width={250}
             height={250}
