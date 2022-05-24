@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
-export const PROJECTS_BLOG_HOME_PAGE = gql`
-  query ProjectsAndBlogs {
+export const PROJECTS_BLOG_JOBS_HOME_PAGE = gql`
+  query ProjectsJobsAndBlogs {
     projects(filters: { featured: { eq: true } }) {
       data {
         id
@@ -54,9 +54,24 @@ export const PROJECTS_BLOG_HOME_PAGE = gql`
         }
       }
     }
+    jobs {
+      data {
+        id
+        attributes {
+          company
+          position
+          location
+          date
+          desc {
+            id
+            name
+          }
+          createdAt
+        }
+      }
+    }
   }
 `;
-
 
 export const ABOUT_ABOUT = gql`
   query About {
@@ -159,53 +174,52 @@ export const GET_ALL_PROJECT_ID = gql`
       }
     }
   }
-`; 
+`;
 
 export const GET_PROJECT = gql`
-        query Projects($_id: ID!)  {
-          projects(filters: { id: { eq: $_id } }) {
+  query Projects($_id: ID!) {
+    projects(filters: { id: { eq: $_id } }) {
+      data {
+        id
+        attributes {
+          title
+          description
+          image {
             data {
-              id
               attributes {
-                title
-                description
-                image {
-                  data {
-                    attributes {
-                      url
-                      name
-                      alternativeText
-                    }
-                  }
-                }
-                github
                 url
-                featured
-                visible
-                stack {
-                  id
-                  title
-                }
-                updatedAt
-                createdAt
+                name
+                alternativeText
               }
             }
           }
-        }
-      `
-
-      export const GET_ALL_BLOG_POSTS_SLUG = gql`
-        query BlogPosts {
-          blogs {
-            data {
-              attributes {
-                slug
-              }
-            }
+          github
+          url
+          featured
+          visible
+          stack {
+            id
+            title
           }
+          updatedAt
+          createdAt
         }
-      `; 
+      }
+    }
+  }
+`;
 
+export const GET_ALL_BLOG_POSTS_SLUG = gql`
+  query BlogPosts {
+    blogs {
+      data {
+        attributes {
+          slug
+        }
+      }
+    }
+  }
+`;
 
 export const GET_BLOG_POST = gql`
   query Blogs($_slug: String!) {

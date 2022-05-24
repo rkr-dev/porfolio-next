@@ -4,11 +4,11 @@ import { FaAngleDoubleRight } from 'react-icons/fa';
 import Link from 'next/link'
 import { Title } from '..';
 import styles from './Experience.module.css';
-import { jobs } from '../../utils/data';
+import { JobProps } from '../../interfaces';
 
 
 
-export const Experience = () => {
+export const Experience = ({jobs}:{jobs:JobProps[]}) => {
   const [value, setValue] = useState(0);
   const { company, position, location, date, desc } = jobs[value];
   return (

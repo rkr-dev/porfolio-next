@@ -25,9 +25,9 @@ export type JobProps = {
   id: number;
   company:string;
   position:string;
-  location:string;
+  location?:string;
   date:string;
-  desc:{id:number,name:string}[];
+  desc:{id:string,name:string}[];
 };
 
 export type ImageProps = {
