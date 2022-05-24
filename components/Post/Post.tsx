@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { PostProps } from '../../interfaces';
 import styles from './Post.module.css';
 
 export const Post = ({
@@ -11,16 +12,7 @@ export const Post = ({
   category,
   slug,
   desc,
-}: {
-  id: string;
-  title: string;
-  content: string;
-  image: string;
-  slug: string;
-  category: string;
-  desc: string;
-  date: string;
-}) => {
+}: PostProps) => {
   return (
     <Link href={`/blog/[slug]`} as={`/blog/${slug}`} key={id}>
       <a>
@@ -28,8 +20,8 @@ export const Post = ({
           <div className={styles.BlogImg}>
             {image && (
               <Image
-                src={image}
-                alt={title}
+                src={image.url}
+                alt={image.alternativeText}
                 width={`100%`}
                 height={`100%`}
                 layout='responsive'
