@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { format } from 'date-fns';
 import { PostProps } from '../../interfaces';
 import styles from './Post.module.css';
 
@@ -35,13 +36,11 @@ export const Post = ({
           <div className={styles.blogCard}>
             <h4>{title}</h4>
             <p className={styles.blogDescription}>
-              {desc.length > 125
-                ? `${desc.substr(0, 125)} ...`
-                : desc}
+              {desc.length > 125 ? `${desc.substr(0, 125)} ...` : desc}
             </p>
             <div className={styles.blogFooter}>
               <p>{category}</p>
-              <p>{date}</p>
+              <p>{format( new Date(date),'d.M.yyyy HH:mm:ss')}</p>
             </div>
           </div>
         </article>
