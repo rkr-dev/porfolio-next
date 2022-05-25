@@ -38,8 +38,8 @@ export const Project = ({
           <div className={styles.ProjectCard}>
             <h4>{title}</h4>
             <p>
-              {description.length > 100
-                ? `${description.substr(0, 100)} ...`
+              {description.length > 125
+                ? `${description.substr(0, 125)} ...`
                 : description}
             </p>
             <div className={styles.ProjectStack}>
